@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Knew It!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>I KNOW YOU WILL SAY YES</h1>
+        <button id="continueButton" onclick="redirectToMessage()">Continue</button>
+        <button id="exitButton" onmouseover="moveExit()">Exit</button>
+    </div>
+
+    <script>
+        function moveExit() {
+            const button = document.getElementById("exitButton");
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            button.style.position = "absolute";
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+
+        function redirectToMessage() {
+            window.location.href = "message.html"; 
+        }
+    </script>
+</body>
+</html>

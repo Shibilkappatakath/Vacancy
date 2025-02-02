@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffcccb;
+    text-align: center;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #d6336c;
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#yesButton {
+    background-color: #ff4081;
+    color: white;
+}
+
+#noButton {
+    background-color: #ccc;
+    color: black;
+}
+
+#pickDateButton {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#cancelButton {
+    background-color: #f44336;
+    color: white;
+}
+
+#calendar {
+    margin-top: 20px;
+}

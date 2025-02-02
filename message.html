@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Request</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <p>Dear Mufeeda,</p>
+        <p>He has been waiting for you for almost four years, holding onto the hope of a moment like this. Don’t make his heart wait any longer. He dreams of a beautiful evening with you, where time slows down, and it’s just the two of you.</p>
+        <p>Please, pick a date on the calendar, and let this wait turn into a memory worth cherishing. ❤️</p>
+
+        <button id="pickDateButton" onclick="showCalendar()">Pick a Date</button>
+        <button id="cancelButton" onmouseover="moveCancel()">Cancel</button>
+
+        <div id="calendar" style="display: none;">
+            <label for="datePicker">Select a date:</label>
+            <input type="date" id="datePicker" min="2025-01-01" max="2026-12-31">
+            <button onclick="submitDate()">Confirm</button>
+        </div>
+    </div>
+
+    <script>
+        function moveCancel() {
+            const button = document.getElementById("cancelButton");
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            button.style.position = "absolute";
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+
+        function showCalendar() {
+            document.getElementById("calendar").style.display = "block";
+        }
+
+        function submitDate() {
+            const selectedDate = document.getElementById("datePicker").value;
+            if (selectedDate) {
+                const email = "shibil.kappatakath@outlook.com";  
+                const subject = "Mufeeda Selected a Date!";
+                const body = `Mufeeda selected: ${selectedDate}`;
+
+                // Open email app with pre-filled details
+                window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            } else {
+                alert("Please select a date first!");
+            }
+        }
+    </script>
+</body>
+</html>
